@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6D1E16;
+  --secondary: #F8B460;
+  --accent: #C4D5BE;
+  --background: #FFF6EF;
+  --form-bg: #FFC2DB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  @apply bg-background text-black;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  color: var(--primary);
+}
+
+.cake-name {
+  font-family: 'Pacifico', cursive;
+}
+
+.hero-section {
+  @apply relative min-h-[600px] w-full;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://images.unsplash.com/photo-1562777717-dc6984f65a63?auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-link {
+  @apply hover:text-secondary transition-colors duration-200;
+}
+
+.cta-button {
+  @apply bg-secondary text-white px-6 py-3 rounded-full font-semibold 
+         hover:bg-opacity-90 transition-all duration-200 transform hover:scale-105;
+}
+
+.order-button {
+  @apply bg-accent text-primary px-4 py-2 rounded-full font-semibold 
+         hover:bg-opacity-90 transition-all duration-200 transform hover:scale-105;
+}
+
+.cake-card {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden transform 
+         transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.form-input {
+  @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none 
+         focus:ring-2 focus:ring-secondary focus:border-transparent;
+}
+
+.loading-image {
+  @apply animate-pulse bg-gray-200;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
